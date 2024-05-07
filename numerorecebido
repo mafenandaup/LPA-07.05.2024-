@@ -1,0 +1,41 @@
+package arraysjava;
+
+import java.util.Random;
+
+public class numerorecebido {
+
+	public static void main(String[] args) {
+		int vetor1[] = new int[50];
+		preencher(vetor1);
+		shownum(vetor1);
+		verificar(vetor1);
+	}
+
+	public static void preencher(int[] v) {
+		
+		Random rand = new Random();
+		for (int i = 0; i < v.length; i++) {
+			v[i] = rand.nextInt(20);
+		}
+	}
+	public static void shownum(int[] v) {
+		for (int i = 0; i < v.length; i++) {
+			System.out.println(v[i] + " ");
+		}
+	}
+
+	public static void verificar(int[] v) {
+		Random rand = new Random();
+		int num = rand.nextInt(20);
+		System.out.println("\n");
+		System.out.println("o número selecionado é " +num);
+		System.out.println("");
+		int cont = 0;
+		for (int i = 0; i < v.length; i++) {
+			if (v[i] == num) {
+				cont++;
+			}
+		}
+		System.out.println("o número digitado aparece " +cont+ " vezes");
+	}
+}
