@@ -1,0 +1,36 @@
+package arraysjava;
+
+import java.util.Random;
+
+public class numeroinversoreal {
+
+	public static void main(String[] args) {
+		int vetor[] = new int[10];
+		sortnum(vetor);
+		shownum(vetor);
+		inverse(vetor);
+	}
+
+	public static void sortnum(int[] v) {
+		Random rand = new Random();
+		for (int i = 0; i < v.length; i++) {
+			v[i] = rand.nextInt(10);
+		}
+
+	}
+
+	public static void shownum(int[] v) {
+		for (int i = 0; i < v.length; i++) {
+			System.out.println(v[i] + " ");
+		}
+		System.out.println("\n");
+	}
+
+	public static void inverse (int[] v) {
+			for(int i=v.length-1; i>=0; i--) {
+				System.out.println(v[i] + " ");
+			}
+	}
+
+
+}
