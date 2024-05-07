@@ -1,0 +1,48 @@
+package arraysjava;
+
+import java.util.Random;
+
+public class somavetores {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int vetor1[] = new int[10];
+		int vetor2[] = new int[10];
+		int soma[] = new int[10];
+		preencher(vetor1,vetor2);
+		shownum(vetor1,vetor2);
+		soma(vetor1,vetor2);
+	}
+	
+ public static void preencher(int[]v, int[]v2) {
+	 Random rand = new Random();
+	 for (int i = 0;i< v.length ; i++) {
+		 v[i]= rand.nextInt(20);
+		 v2[i]= rand.nextInt(20);
+	 }
+ }
+ 
+	public static void shownum(int[] v, int[]v2) {
+		System.out.println("\n");
+		System.out.println("primeiro array");
+		for (int i = 0; i < v.length; i++) {
+			System.out.println(v[i] + " ");
+		}
+		System.out.println("\n");
+		System.out.println("segundo array");
+		for (int i = 0; i < v.length; i++) {
+			System.out.println(v2[i] + " ");
+		}
+	}
+	public static void soma(int[] v, int[]v2) {
+		System.out.println("\n");
+		System.out.println("terceiro array (soma)");
+	int[]v3 =new int[v.length];
+	for(int i=0; i<v.length; i++) {
+		v3[i]=v[i]+v2[i];
+		System.out.println(v3[i]);
+	}
+
+}
+
+}
