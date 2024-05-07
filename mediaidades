@@ -1,0 +1,45 @@
+package arraysjava;
+
+import java.util.Random;
+
+public class nomeeidade {
+
+	public static void main(String[] args) {
+		String nomes[] = { "Ana", "João", "Maria", "Pedro", "Lucas", "Julia", "Gabriel", "Luisa", "Rafael", "Carla",
+				"Bruno", "Fernanda", "Carlos", "Amanda", "Eduardo", "Camila", "Felipe", "Isabela", "Guilherme",
+				"Beatriz" };
+		int idades[] = new int[20];
+		idade(idades);
+		mostrar(idades,nomes);
+		media(idades);
+	}
+
+	public static void idade(int v[]) {
+		Random rand = new Random();
+		for (int i = 0; i < v.length; i++) {
+			v[i] = rand.nextInt(99);
+		}
+	}
+
+	public static void mostrar(int v[], String nomes[]) {
+		for (int i = 0; i < v.length; i++) {
+			System.out.println(nomes[i]+ " , " + v[i]+ " anos");
+
+		}
+	}
+	public static void media (int[]v) {
+		int soma = 0;
+		for (int i = 0; i < v.length; i++) {
+			soma = soma + v[i];
+		}
+		int media = soma/v.length;
+		System.out.println("a média das idades é " +media);
+		int cont = 0;
+		for (int i = 0; i < v.length; i++) {
+			if (v[i]>media) {
+				cont++;
+			}
+		}
+		System.out.println("existem " +cont+ " pessoas acima da média de idades");
+	}
+}
