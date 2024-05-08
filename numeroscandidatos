@@ -1,0 +1,57 @@
+package exercicio;
+
+import java.util.Random;
+
+public class numeroscandidatos {
+
+	public static void main(String[] args) {
+		String candidatos[] = { "Joao", "Felipe", "Beatriz", "Monica", "Celso" };
+		int votos1[] = new int[200];
+		System.out.println("(0) BRANCO");
+		for (int i = 0; i < candidatos.length; i++) {
+			System.out.println("Candidato " + (i + 1) + " : " + candidatos[i]);
+		}
+		votocontagem(votos1);
+		verify(votos1, candidatos);
+	}
+
+	public static void votocontagem(int v[]) {
+		Random rand = new Random();
+		for (int i = 0; i < v.length; i++) {
+			v[i] = rand.nextInt(5);
+		}
+	}
+
+	public static void verify(int v[], String candidatos[]) {
+		int branco = 0, voto1 = 0, voto2 = 0, voto3 = 0, voto4 = 0, voto5 = 0;
+		for (int i = 0; i < v.length; i++) {
+			if (v[i] == 0) {
+				branco++;
+			} 
+			if (v[i] == 1) {
+				voto1++;
+			} 
+			
+			if (v[i] == 2) {
+				voto2++;
+			} 
+			
+			if (v[i] == 3) {
+				voto3++;
+			} 
+			if (v[i] == 4) {
+				voto4++;
+			
+			}if (v[i] == 5) {
+				voto5++;
+			}
+			
+		}
+		System.out.println("(0) BRANCO" +branco);
+		System.out.println("Candidato:Joao (" +voto1+ "votos)");
+		System.out.println("Candidato:Felipe (" +voto2+ "votos)");
+		System.out.println("Candidato:Beatriz (" +voto3+ "votos)");
+		System.out.println("Candidato:Monica (" +voto4+ "votos)");
+		System.out.println("Candidato:Celso (" +voto5+ "votos)");
+		}
+	}
