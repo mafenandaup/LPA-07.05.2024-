@@ -1,12 +1,13 @@
-package exercicio;
+package arraysjava;
 
 import java.util.Random;
 
-public class numeroscandidatos {
+public class votocandidatos {
 
 	public static void main(String[] args) {
 		String candidatos[] = { "Joao", "Felipe", "Beatriz", "Monica", "Celso" };
 		int votos1[] = new int[200];
+		System.out.println(" ");
 		System.out.println("(0) BRANCO");
 		for (int i = 0; i < candidatos.length; i++) {
 			System.out.println("Candidato " + (i + 1) + " : " + candidatos[i]);
@@ -47,11 +48,13 @@ public class numeroscandidatos {
 			}
 			
 		}
-		System.out.println("(0) BRANCO" +branco);
-		System.out.println("Candidato:Joao (" +voto1+ "votos)");
-		System.out.println("Candidato:Felipe (" +voto2+ "votos)");
-		System.out.println("Candidato:Beatriz (" +voto3+ "votos)");
-		System.out.println("Candidato:Monica (" +voto4+ "votos)");
-		System.out.println("Candidato:Celso (" +voto5+ "votos)");
+		System.out.println("");
+		System.out.println("VOTAÇÕES FINAIS");
+		System.out.println("VOTO NULO/BRANCO (" +branco+ " votos)");
+		System.out.println("Joao (" +voto1+ " votos)");
+		System.out.println("Felipe (" +voto2+ " votos)");
+		System.out.println("Beatriz (" +voto3+ " votos)");
+		System.out.println("Monica (" +voto4+ " votos)");
+		System.out.println("Celso (" +voto5+ " votos)");
 		}
 	}
