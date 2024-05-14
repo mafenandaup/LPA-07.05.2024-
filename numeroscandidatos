@@ -19,7 +19,7 @@ public class votocandidatos {
 	public static void votocontagem(int v[]) {
 		Random rand = new Random();
 		for (int i = 0; i < v.length; i++) {
-			v[i] = rand.nextInt(5);
+			v[i] = rand.nextInt(6);
 		}
 	}
 
