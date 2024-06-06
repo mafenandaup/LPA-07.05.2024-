@@ -36,3 +36,4 @@ public class maiorvalorvetor {
 			System.out.println("ok?")
 	}
 }
+//uso do comando restore
