@@ -33,6 +33,7 @@ media (notas);
 		}
 		int media = soma/v.length;
 		System.out.println("a média das notas dos alunos é " +media);
+		System.out.println("ok?")
 	}
 
 }

@@ -33,5 +33,6 @@ public class maiorvalorvetor {
 				}
 			}
 			System.out.println("o maior número é " +maior);
+			System.out.println("ok?")
 	}
 }
